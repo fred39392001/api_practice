@@ -14,6 +14,19 @@ submitBtn.addEventListener('click', async function(){
     alert('Email 或密碼欄位不得為空!')
     return;
   }
+  // axios 寫法
+  // axios.post('https://eid-backend.townway.com.tw/accounts/signin', myFormData)
+  // .then(function(res){
+  //   console.log(res.data);
+  //   alert(`${res.data.username}您好，您已登入成功！`);
+  //   emailInput.value = '';
+  //   passwordInput.value = '';
+  //   renderData(res);
+  // })
+  // .catch(function(err){
+  //   console.log(err);
+  //   alert('登入失敗，請輸入正確的 Email 或密碼！')
+  // });
   await signIn(url, myFormData);
 });
 
